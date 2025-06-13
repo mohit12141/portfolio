@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 🚀 Mohit Sahu's Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website — built with **React**, **Tailwind CSS**, and deployed via **GitHub Pages**!
 
-## Available Scripts
+🌐 **Live Site:** [https://mohit12141.github.io/portfolio](https://mohit12141.github.io/portfolio)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 About the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a fully responsive, mobile-first portfolio to showcase:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- My projects
+- Certifications
+- Technical stack
+- Resume and contact details
 
-### `npm test`
+It’s designed to be clean, modern, and easily extendable as I grow professionally.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🔗 Smooth scroll navigation
+- 🎨 Dark mode ready (toggle currently disabled)
+- 📱 Fully responsive design
+- 🧠 React-powered project carousel with filters
+- 📄 Resume download + live social links
+- 💬 Contact form support via EmailJS (optional)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Tech Stack
 
-### `npm run eject`
+| Technology    | Purpose                         |
+|---------------|----------------------------------|
+| React         | Component-based UI              |
+| Tailwind CSS  | Utility-first CSS styling       |
+| Swiper.js     | Project carousel                |
+| React Icons   | Social and UI icons             |
+| EmailJS       | Serverless form support (opt)   |
+| GitHub Pages  | Free static deployment          |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To clone and run this portfolio locally:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Clone the repo
+git clone https://github.com/mohit12141/portfolio.git
+cd portfolio
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Run the local dev server
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To deploy updates to GitHub Pages:
 
-### Code Splitting
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📫 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Let’s connect:
 
-### Making a Progressive Web App
+- 💼 [LinkedIn](https://www.linkedin.com/in/mohit-sahu-89254b191/)
+- 🐙 [GitHub](https://github.com/mohit12141)
+- 📧 Email: mohitsahu.dev@gmail.com
+- 🧠 [LeetCode](https://leetcode.com/u/mohit1412/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+> 💻 Made with ❤️ by Mohit Sahu
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📷 (Optional) Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can add UI screenshots by placing them in an `/assets/images` folder and embedding like:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```markdown
+![Home Page](./assets/images/home.png)
+```
