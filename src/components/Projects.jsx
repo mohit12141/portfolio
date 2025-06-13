@@ -77,16 +77,16 @@ const Projects = () => {
     <div
       key={i}
       data-aos="fade-up"
-      className="bg-secondary rounded-lg shadow-lg p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 hover:shadow-xl h-full"
+      className="bg-white shadow-md rounded-xl p-6 flex flex-col justify-between hover:shadow-xl transition h-full"
     >
       <div>
-        <h3 className="text-xl font-semibold mb-2 text-textDark">{project.title}</h3>
-        <p className="text-gray-700 mb-4">{project.description}</p>
+        <h3 className="text-xl font-semibold mb-2 text-primary">{project.title}</h3>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.map((tech, idx) => (
             <span
               key={idx}
-              className="bg-white text-sm text-primary px-3 py-1 rounded-full shadow"
+              className="bg-highlight text-sm text-primary px-3 py-1 rounded-full shadow"
             >
               {tech}
             </span>
@@ -118,70 +118,71 @@ const Projects = () => {
     </div>
   );
 
-
   const middleIndex =
-  activeFilter === "All" &&
-  swiperInstance?.params?.slidesPerView
-    ? activeIndex + Math.floor(swiperInstance.params.slidesPerView / 2)
-    : -1;
-
+    activeFilter === "All" &&
+    swiperInstance?.params?.slidesPerView
+      ? activeIndex + Math.floor(swiperInstance.params.slidesPerView / 2)
+      : -1;
 
   return (
-    <section id="projects" className="pt-24 bg-white dark:bg-[#111827] px-4 md:px-12 py-16 text-textDark dark:text-gray-200">
+    <section id="projects" className="relative">
+      <div id="projects-anchor" className="absolute -top-20" />
 
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-primary text-center mb-8">Projects</h2>
+      <div className="pt-24 px-4 md:px-12 py-16 bg-section">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-primary text-center mb-8">Projects</h2>
 
-        <div className="flex flex-wrap justify-center mb-10 gap-3">
-          {allTechs.map((tech) => (
-            <button
-              key={tech}
-              onClick={() => setActiveFilter(tech)}
-              className={`px-4 py-2 rounded-full border text-sm transition-all ${
-                activeFilter === tech
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-primary hover:bg-primary hover:text-white'
-              }`}
-            >
-              {tech}
-            </button>
-          ))}
-        </div>
-
-        {activeFilter === "All" ? (
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 4000 }}
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-            onSwiper={(swiper) => setSwiperInstance(swiper)}
-          >
-            {filteredProjects.map((project, i) => (
-              <SwiperSlide key={i}>
-                <div
-                  className={`transition-all duration-300 ${
-                    i === middleIndex
-                      ? 'scale-105 shadow-2xl z-10'
-                      : 'scale-95 opacity-80'
-                  }`}
-                >
-                  {renderProjectCard(project, i)}
-                </div>
-              </SwiperSlide>
+          <div className="flex flex-wrap justify-center mb-10 gap-3">
+            {allTechs.map((tech) => (
+              <button
+                key={tech}
+                onClick={() => setActiveFilter(tech)}
+                className={`px-4 py-2 rounded-full border text-sm transition-all ${
+                  activeFilter === tech
+                    ? 'bg-primary text-white'
+                    : 'bg-white text-primary hover:bg-accent hover:text-white'
+                }`}
+              >
+                {tech}
+              </button>
             ))}
-          </Swiper>
-        ) : (
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredProjects.map((project, i) => renderProjectCard(project, i))}
           </div>
-        )}
+
+          {activeFilter === "All" ? (
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 4000 }}
+              spaceBetween={30}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              onSwiper={(swiper) => setSwiperInstance(swiper)}
+            >
+              {filteredProjects.map((project, i) => (
+                <SwiperSlide key={i}>
+                  <div
+                    className={`transition-all duration-300 ${
+                      i === middleIndex
+                        ? 'scale-105 shadow-2xl z-10'
+                        : 'scale-95 opacity-80'
+                    }`}
+                  >
+                    {renderProjectCard(project, i)}
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {filteredProjects.map((project, i) => renderProjectCard(project, i))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

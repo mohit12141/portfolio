@@ -6,10 +6,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { to: 'about', label: 'About' },
-    { to: 'projects', label: 'Projects' },
-    { to: 'certifications', label: 'Certifications' },
-    { to: 'contact', label: 'Contact' }
+    { to: 'about-anchor', label: 'About' },
+    { to: 'tech-anchor', label: 'Tools & Tech' },
+    { to: 'projects-anchor', label: 'Projects' },
+    { to: 'certifications-anchor', label: 'Certifications' },
+    { to: 'contact-anchor', label: 'Contact' }
   ];
 
   return (
@@ -26,11 +27,11 @@ const Navbar = () => {
               key={link.to}
               to={link.to}
               smooth={true}
-              duration={500}
-              offset={-64}
+              duration={50}
+              offset={0}
+              spy={true}
               className="cursor-pointer hover:text-primary transition"
               activeClass="text-primary font-semibold"
-              spy={true}
             >
               {link.label}
             </Link>
@@ -59,8 +60,10 @@ const Navbar = () => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                offset={-64}
+                offset={0}
+                spy={true}
                 className="cursor-pointer hover:text-primary transition"
+                activeClass="text-primary font-semibold"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

@@ -1,3 +1,4 @@
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +6,15 @@
 html {
   scroll-behavior: smooth;
 }
+
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
+
+/* 🌈 Reusable utility classes (optional but helpful) */
+.bg-section {
+  @apply bg-background dark:bg-[#111827] text-textDark dark:text-textLight;
+}
+.btn-primary {
+  @apply bg-primary text-white hover:bg-accent transition rounded px-4 py-2;
+}
